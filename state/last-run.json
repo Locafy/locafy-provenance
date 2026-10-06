@@ -1,8 +1,8 @@
 {
-  "archive_errors": 0,
-  "archive_queue": 150,
-  "archived": 1,
-  "changes": 151,
+  "archive_errors": 9,
+  "archive_queue": 139,
+  "archived": 11,
+  "changes": 0,
   "day": "2026-10-06",
   "files": 151,
   "pending_proofs": [],

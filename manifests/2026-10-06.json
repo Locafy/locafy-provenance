@@ -913,7 +913,7 @@
     "okf_version": "0.2",
     "spec": "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md"
   },
-  "observed_at": "2026-10-06T11:33:00Z",
+  "observed_at": "2026-10-06T11:34:33Z",
   "source": "https://www.locafy.com/okf/manifest.json",
   "spot_check_mismatches": []
 }
