@@ -1,10 +1,12 @@
 {
-  "archive_errors": 9,
+  "archive_errors": 0,
   "archive_queue": 139,
-  "archived": 11,
+  "archived": 0,
   "changes": 0,
   "day": "2026-10-06",
   "files": 151,
-  "pending_proofs": [],
+  "pending_proofs": [
+    "manifests/2026-10-06.json.ots"
+  ],
   "spot_check_mismatches": []
 }

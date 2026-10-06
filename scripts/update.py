@@ -14,7 +14,8 @@ Daily provenance run for www.locafy.com.
    to Save Page Now, logging each result in archive/YYYY-MM-DD.jsonl.
 
 Stdlib only, plus the `ots` CLI (opentimestamps-client). Safe to re-run: a
-second run on the same day overwrites that day's manifest and ledger.
+second run on the same day replaces that day's manifest snapshot and appends
+to (never replaces) that day's ledger.
 """
 import datetime as dt
 import hashlib
@@ -28,6 +29,9 @@ import urllib.request
 
 MANIFEST_URL = "https://www.locafy.com/okf/manifest.json"
 ARCHIVE_LIMIT = int(os.environ.get("ARCHIVE_LIMIT", "20"))
+# Save Page Now can take minutes per URL; stop archiving after this many seconds
+# so the run always reaches its commit step well inside the job timeout.
+ARCHIVE_BUDGET_S = int(os.environ.get("ARCHIVE_BUDGET_S", "600"))
 SAMPLE = int(os.environ.get("VERIFY_SAMPLE", "10"))
 UA = "locafy-provenance/1 (+https://github.com/Locafy/locafy-provenance)"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -85,18 +89,23 @@ def main():
 
     manifest_p = path("manifests", f"{day}.json")
     write_json(manifest_p, {"observed_at": stamp_at, "source": MANIFEST_URL, "spot_check_mismatches": mismatches, "manifest": manifest})
+    # The ledger is append-only: a second run on the same day adds its changes
+    # to that day's file instead of replacing what an earlier run recorded.
     ledger_p = path("ledger", f"{day}.jsonl")
-    with open(ledger_p, "w", encoding="utf-8") as fh:
+    with open(ledger_p, "a", encoding="utf-8") as fh:
         for e in entries:
             fh.write(json.dumps(e, sort_keys=True) + "\n")
     write_json(state_p, {p: f["sha256"] for p, f in files.items()})
 
     # 4. OpenTimestamps
-    for target in (manifest_p, ledger_p):
+    # Restamp only files whose bytes changed this run; an unchanged ledger keeps
+    # its existing (possibly already Bitcoin-confirmed) proof.
+    to_stamp = [manifest_p] + ([ledger_p] if entries or not os.path.exists(ledger_p + ".ots") else [])
+    for target in to_stamp:
         if os.path.exists(target + ".ots"):
-            os.remove(target + ".ots")  # same-day re-run: restamp the new bytes
+            os.remove(target + ".ots")
         subprocess.run(["ots", "stamp", target], check=True)
-    pending = []
+    pending = [os.path.relpath(t, ROOT) + ".ots" for t in to_stamp]  # fresh proofs always start pending
     for d in ("manifests", "ledger"):
         for name in sorted(os.listdir(os.path.join(ROOT, d))):
             if name.endswith(".ots") and not name.startswith(day):
@@ -108,13 +117,13 @@ def main():
     queue_p = path("archive", "queue.txt")
     queue = [l.strip() for l in open(queue_p)] if os.path.exists(queue_p) else []
     queue += [e["url"] for e in entries if e["change"] != "removed" and e["url"] not in queue]
-    results, done = [], 0
+    results, done, started = [], 0, time.monotonic()
     for url in list(queue):
-        if done >= ARCHIVE_LIMIT:
+        if done >= ARCHIVE_LIMIT or time.monotonic() - started > ARCHIVE_BUDGET_S:
             break
         try:
             req = urllib.request.Request("https://web.archive.org/save/" + url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=120) as r:
+            with urllib.request.urlopen(req, timeout=60) as r:
                 snapshot = r.headers.get("Content-Location") or r.geturl()
                 results.append({"url": url, "status": r.status, "snapshot": snapshot, "at": stamp_at})
             queue.remove(url)
