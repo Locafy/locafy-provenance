@@ -1,4 +1,3 @@
-https://www.locafy.com/okf/guides/aeo-vs-seo.md
 https://www.locafy.com/okf/guides/ai-overviews-guide.md
 https://www.locafy.com/okf/guides/ai-search-visibility-report-2026.md
 https://www.locafy.com/okf/guides/chatgpt-sites-master-prompt-local-business.md
@@ -8,13 +7,11 @@ https://www.locafy.com/okf/guides/funeral-home-seo.md
 https://www.locafy.com/okf/guides/future-of-aeo.md
 https://www.locafy.com/okf/guides/gbp-attributes-guide.md
 https://www.locafy.com/okf/guides/gbp-insights-guide.md
-https://www.locafy.com/okf/guides/gbp-optimization-checklist.md
 https://www.locafy.com/okf/guides/gbp-photos-optimization.md
 https://www.locafy.com/okf/guides/gbp-posts-guide.md
 https://www.locafy.com/okf/guides/gbp-qa-optimization.md
 https://www.locafy.com/okf/guides/gbp-services-products.md
 https://www.locafy.com/okf/guides/gbp-suspension-recovery.md
-https://www.locafy.com/okf/guides/gbp-verification-guide.md
 https://www.locafy.com/okf/guides/generative-engine-optimization-guide.md
 https://www.locafy.com/okf/guides/generative-engine-optimization-services.md
 https://www.locafy.com/okf/guides/generative-engine-optimization-tools.md
