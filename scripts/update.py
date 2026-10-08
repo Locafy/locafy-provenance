@@ -108,8 +108,11 @@ def main():
     pending = [os.path.relpath(t, ROOT) + ".ots" for t in to_stamp]  # fresh proofs always start pending
     for d in ("manifests", "ledger"):
         for name in sorted(os.listdir(os.path.join(ROOT, d))):
-            if name.endswith(".ots") and not name.startswith(day):
-                r = subprocess.run(["ots", "upgrade", os.path.join(ROOT, d, name)], capture_output=True, text=True)
+            if name.endswith(".ots") and not name.startswith(day):  # skip .ots.bak too: endswith(".ots")
+                proof = os.path.join(ROOT, d, name)
+                r = subprocess.run(["ots", "upgrade", proof], capture_output=True, text=True)
+                if os.path.exists(proof + ".bak"):
+                    os.remove(proof + ".bak")  # `ots upgrade` keeps a backup of the old proof
                 if r.returncode != 0:
                     pending.append(f"{d}/{name}")
 
