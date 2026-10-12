@@ -1,10 +1,8 @@
-https://www.locafy.com/okf/guides/future-of-aeo.md
 https://www.locafy.com/okf/guides/gbp-insights-guide.md
 https://www.locafy.com/okf/guides/gbp-photos-optimization.md
 https://www.locafy.com/okf/guides/gbp-posts-guide.md
 https://www.locafy.com/okf/guides/gbp-services-products.md
 https://www.locafy.com/okf/guides/generative-engine-optimization-guide.md
-https://www.locafy.com/okf/guides/generative-engine-optimization-services.md
 https://www.locafy.com/okf/guides/generative-engine-optimization-tools.md
 https://www.locafy.com/okf/guides/geo-content-optimization.md
 https://www.locafy.com/okf/guides/geo-for-local-businesses.md
@@ -118,3 +116,7 @@ https://www.locafy.com/okf/stories/index.md
 https://www.locafy.com/okf/stories/pauls-gutter-cleaning.md
 https://www.locafy.com/okf/stories/precision-mobile-tinting.md
 https://www.locafy.com/okf/stories/sure-roy-painting-decorating.md
+https://www.locafy.com/okf/services/ai-seo.md
+https://www.locafy.com/okf/services/answer-engine-optimization.md
+https://www.locafy.com/okf/services/index.md
+https://www.locafy.com/okf/services/local-seo.md
