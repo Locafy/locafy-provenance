@@ -1,11 +1,8 @@
-https://www.locafy.com/okf/guides/gbp-insights-guide.md
 https://www.locafy.com/okf/guides/gbp-photos-optimization.md
 https://www.locafy.com/okf/guides/gbp-posts-guide.md
-https://www.locafy.com/okf/guides/gbp-services-products.md
 https://www.locafy.com/okf/guides/generative-engine-optimization-guide.md
 https://www.locafy.com/okf/guides/generative-engine-optimization-tools.md
 https://www.locafy.com/okf/guides/geo-content-optimization.md
-https://www.locafy.com/okf/guides/geo-for-local-businesses.md
 https://www.locafy.com/okf/guides/geo-seo-strategy.md
 https://www.locafy.com/okf/guides/geo-vs-seo.md
 https://www.locafy.com/okf/guides/google-ai-mode-guide.md
