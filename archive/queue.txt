@@ -1,14 +1,10 @@
-https://www.locafy.com/okf/guides/gbp-photos-optimization.md
 https://www.locafy.com/okf/guides/gbp-posts-guide.md
 https://www.locafy.com/okf/guides/generative-engine-optimization-guide.md
-https://www.locafy.com/okf/guides/generative-engine-optimization-tools.md
 https://www.locafy.com/okf/guides/geo-content-optimization.md
 https://www.locafy.com/okf/guides/geo-seo-strategy.md
-https://www.locafy.com/okf/guides/geo-vs-seo.md
 https://www.locafy.com/okf/guides/google-ai-mode-guide.md
 https://www.locafy.com/okf/guides/google-business-profile-optimization.md
 https://www.locafy.com/okf/guides/google-maps-ranking-tips.md
-https://www.locafy.com/okf/guides/google-maps-seo.md
 https://www.locafy.com/okf/guides/google-reviews-link-generator.md
 https://www.locafy.com/okf/guides/google-reviews-seo-impact.md
 https://www.locafy.com/okf/guides/how-long-does-local-seo-take.md
