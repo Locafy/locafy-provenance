@@ -1,13 +1,13 @@
 {
-  "archive_errors": 15,
-  "archive_queue": 90,
-  "archived": 3,
+  "archive_errors": 14,
+  "archive_queue": 86,
+  "archived": 4,
   "changes": 0,
-  "day": "2026-10-23",
+  "day": "2026-10-24",
   "files": 155,
   "pending_proofs": [
-    "manifests/2026-10-23.json.ots",
-    "ledger/2026-10-23.jsonl.ots"
+    "manifests/2026-10-24.json.ots",
+    "ledger/2026-10-24.jsonl.ots"
   ],
   "spot_check_mismatches": []
 }
