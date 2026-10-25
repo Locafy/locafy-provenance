@@ -1,12 +1,9 @@
-https://www.locafy.com/okf/guides/local-citations-guide.md
 https://www.locafy.com/okf/guides/local-seo-audit.md
 https://www.locafy.com/okf/guides/local-seo-for-accountants.md
 https://www.locafy.com/okf/guides/local-seo-for-cleaning-companies.md
 https://www.locafy.com/okf/guides/local-seo-for-contractors.md
 https://www.locafy.com/okf/guides/local-seo-for-dentists.md
-https://www.locafy.com/okf/guides/local-seo-for-electricians.md
 https://www.locafy.com/okf/guides/local-seo-for-insurance-agents.md
-https://www.locafy.com/okf/guides/local-seo-for-landscapers.md
 https://www.locafy.com/okf/guides/local-seo-for-lawyers.md
 https://www.locafy.com/okf/guides/local-seo-for-med-spas.md
 https://www.locafy.com/okf/guides/local-seo-for-medical-practices.md
