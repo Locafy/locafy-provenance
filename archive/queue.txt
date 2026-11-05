@@ -1,13 +1,10 @@
-https://www.locafy.com/okf/guides/local-seo-guide.md
 https://www.locafy.com/okf/guides/local-seo-ranking-factors.md
 https://www.locafy.com/okf/guides/local-seo-roi.md
 https://www.locafy.com/okf/guides/local-seo-statistics.md
 https://www.locafy.com/okf/guides/locksmith-seo.md
 https://www.locafy.com/okf/guides/multi-location-gbp-management.md
-https://www.locafy.com/okf/guides/nap-consistency.md
 https://www.locafy.com/okf/guides/optimize-for-chatgpt.md
 https://www.locafy.com/okf/guides/optimize-for-perplexity.md
-https://www.locafy.com/okf/guides/painting-company-seo.md
 https://www.locafy.com/okf/guides/responding-to-negative-reviews.md
 https://www.locafy.com/okf/guides/review-generation-strategies.md
 https://www.locafy.com/okf/guides/review-management-guide.md
